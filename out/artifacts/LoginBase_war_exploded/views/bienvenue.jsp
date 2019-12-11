@@ -11,6 +11,14 @@
     <title>Welcome</title>
 </head>
 <body>
-    <h1>Bienvenue</h1>
+    <%
+        if(session.getAttribute("nomUser") == null) {
+            response.sendRedirect("/login");
+        }
+    %>
+    <h1>Bienvenue ${nomUser}</h1>
+    <form action="logout">
+        <input type="submit" value="logout">
+    </form>
 </body>
 </html>

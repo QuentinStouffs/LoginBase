@@ -12,6 +12,7 @@
 </head>
 <body>
     <form action="login" method="post">
+        <p style="color: red;">${errorMessage}</p>
         Pseudo: <input type="text" name="nom"><br>
         Pass: <input type="password" name="pass"><br>
         <input type="submit" value="Login">
